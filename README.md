@@ -962,7 +962,7 @@ index 916491d..a785403 100644
 +        type: process.env.FB_CERT_TYPE,
 +        project_id: process.env.FB_CERT_PROJECT_ID,
 +        private_key_id: process.env.FB_CERT_PRIVATE_KEY_ID,
-+        private_key: process.env.FB_CERT_PRIVATE_KEY,
++        private_key: process.env.FB_CERT_PRIVATE_KEY.replace(/\\n/gm, "\n")
 +        client_email: process.env.FB_CERT_CLIENT_EMAIL,
 +        client_id: process.env.FB_CERT_CLIENT_ID,
 +        auth_uri: process.env.FB_CERT_AUTH_URI,
@@ -992,7 +992,7 @@ index 916491d..a785403 100644
 +        type: process.env.FB_CERT_TYPE,
 +        project_id: process.env.FB_CERT_PROJECT_ID,
 +        private_key_id: process.env.FB_CERT_PRIVATE_KEY_ID,
-+        private_key: process.env.FB_CERT_PRIVATE_KEY,
++        private_key: process.env.FB_CERT_PRIVATE_KEY.replace(/\\n/gm, "\n"),
 +        client_email: process.env.FB_CERT_CLIENT_EMAIL,
 +        client_id: process.env.FB_CERT_CLIENT_ID,
 +        auth_uri: process.env.FB_CERT_AUTH_URI,
@@ -1022,7 +1022,7 @@ index 916491d..a785403 100644
 +        type: process.env.FB_CERT_TYPE,
 +        project_id: process.env.FB_CERT_PROJECT_ID,
 +        private_key_id: process.env.FB_CERT_PRIVATE_KEY_ID,
-+        private_key: process.env.FB_CERT_PRIVATE_KEY,
++        private_key: process.env.FB_CERT_PRIVATE_KEY.replace(/\\n/gm, "\n")
 +        client_email: process.env.FB_CERT_CLIENT_EMAIL,
 +        client_id: process.env.FB_CERT_CLIENT_ID,
 +        auth_uri: process.env.FB_CERT_AUTH_URI,
