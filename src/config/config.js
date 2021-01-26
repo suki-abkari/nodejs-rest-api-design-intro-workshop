@@ -7,6 +7,16 @@ const ENV = process.env.NODE_ENV || "development";
 
 logger.enableAll();
 
+const { ENV} = {
+MONGODB_USERNAME,
+  MONGODB_PASSWORD,
+  MONGODB_PROJECT_ID,
+  NODE_ENV: ENV = "developmet",
+} = process.env;
+
+
+  
+
 const CONFIG = {
   production: {
     app: {
@@ -23,7 +33,7 @@ const CONFIG = {
       debug: logger.debug,
     },
     db: {
-      url: process.env.DB_URL,
+      url: `mongodb+srv://${MONGODB_USERNAME}:${MONGODB_PASSWORD}@${MONGODB_PROJECT_ID}.mongodb.net/dani-demo-db?retryWrites=true&w=majority`,
     },
     firebase: {
       certConfig: {
